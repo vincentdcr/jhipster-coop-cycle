@@ -1,0 +1,73 @@
+entity Utilisateur {
+    name String required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/) unique
+  	phone String required pattern(/\d+$/)
+  	address String required minlength(3) maxlength(100)
+}
+
+entity Payment {
+	paymentType PaymentType required
+	amount Integer required min(0)
+}
+
+entity Basket {
+	id String required
+    price Float required min(0)
+}
+
+entity Product {
+    name String required minlength(4)
+    price Float required min(0)
+    quantity Integer required min(0)
+}
+
+entity Restaurant {
+    name String required pattern(/[a-z]/),
+    location String required
+}
+
+entity Cooperative {
+    name String required
+}
+
+entity Order {
+  	orderDate Instant required
+  	orderStatus OrderStatus required
+}
+
+enum OrderStatus {
+  EN_COURS,
+  PRETE,
+  LIVREE
+}
+
+
+enum PaymentType {
+  CB,
+  MASTERCARD,
+  VISA,
+  PAYPAL
+}
+
+relationship OneToMany {
+    Restaurant to Product,
+    Cooperative to Restaurant,
+    Utilisateur to Cooperative,
+    Utilisateur to Basket,
+    Restaurant to Order,
+    Utilisateur to Order
+    
+}
+
+
+relationship OneToOne {
+    Order to Basket,
+    Payment to Order
+}
+
+relationship ManyToMany {
+	Basket to Product
+}
+
+dto * with mapstruct
+
