@@ -1,0 +1,11 @@
+{
+  "jhipsterCoopCycleApp": {
+    "PaymentType": {
+      "null": "",
+      "CB": "CB",
+      "MASTERCARD": "MASTERCARD",
+      "VISA": "VISA",
+      "PAYPAL": "PAYPAL"
+    }
+  }
+}

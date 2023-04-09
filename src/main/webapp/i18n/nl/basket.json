@@ -1,0 +1,27 @@
+{
+  "jhipsterCoopCycleApp": {
+    "basket": {
+      "home": {
+        "title": "Baskets",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Basket",
+        "createOrEditLabel": "Maak of wijzig een Basket",
+        "notFound": "No Baskets found"
+      },
+      "created": "A new Basket is created with identifier {{ param }}",
+      "updated": "A Basket is updated with identifier {{ param }}",
+      "deleted": "A Basket is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Basket {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Basket"
+      },
+      "id": "Id",
+      "price": "Price",
+      "product": "Product",
+      "order": "Order",
+      "utilisateur": "Utilisateur"
+    }
+  }
+}

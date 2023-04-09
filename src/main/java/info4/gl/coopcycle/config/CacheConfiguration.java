@@ -48,6 +48,21 @@ public class CacheConfiguration {
             createCache(cm, info4.gl.coopcycle.domain.User.class.getName());
             createCache(cm, info4.gl.coopcycle.domain.Authority.class.getName());
             createCache(cm, info4.gl.coopcycle.domain.User.class.getName() + ".authorities");
+            createCache(cm, info4.gl.coopcycle.domain.Utilisateur.class.getName());
+            createCache(cm, info4.gl.coopcycle.domain.Utilisateur.class.getName() + ".cooperatives");
+            createCache(cm, info4.gl.coopcycle.domain.Utilisateur.class.getName() + ".baskets");
+            createCache(cm, info4.gl.coopcycle.domain.Utilisateur.class.getName() + ".orders");
+            createCache(cm, info4.gl.coopcycle.domain.Payment.class.getName());
+            createCache(cm, info4.gl.coopcycle.domain.Basket.class.getName());
+            createCache(cm, info4.gl.coopcycle.domain.Basket.class.getName() + ".products");
+            createCache(cm, info4.gl.coopcycle.domain.Product.class.getName());
+            createCache(cm, info4.gl.coopcycle.domain.Product.class.getName() + ".baskets");
+            createCache(cm, info4.gl.coopcycle.domain.Restaurant.class.getName());
+            createCache(cm, info4.gl.coopcycle.domain.Restaurant.class.getName() + ".products");
+            createCache(cm, info4.gl.coopcycle.domain.Restaurant.class.getName() + ".orders");
+            createCache(cm, info4.gl.coopcycle.domain.Cooperative.class.getName());
+            createCache(cm, info4.gl.coopcycle.domain.Cooperative.class.getName() + ".restaurants");
+            createCache(cm, info4.gl.coopcycle.domain.Order.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
